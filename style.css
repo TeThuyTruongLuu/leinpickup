@@ -1,0 +1,127 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #b30000;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.intro, footer {
+  padding: 1rem 2rem;
+  background: #fff8e1;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  background: #f1f1f1;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Tab Layout */
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+}
+
+.tab-buttons {
+  flex: 0 0 250px;
+  background: #f9f9f9;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-btn {
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: #e8e8e8;
+}
+
+.tab-contents {
+  flex: 1;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.img-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.img-box img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+  }
+
+  .tab-buttons {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .tab-btn {
+    flex: 1;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
